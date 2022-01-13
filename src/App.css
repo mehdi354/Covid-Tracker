@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+  background: #f4f4f4;
+}
+.app__container {
+  display: flex;
+  width: 1140px;
+  margin: 0px auto;
+  padding: 20px 0px;
+}
+.app__Left {
+  width: 70%;
+  padding: 0px 15px;
+}
+
+.app__right {
+  width: 30%;
+  padding: 0px 15px;
+}

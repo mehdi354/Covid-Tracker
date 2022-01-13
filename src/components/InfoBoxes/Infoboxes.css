@@ -1,0 +1,4 @@
+.app__infoboxes {
+    display: flex;
+    justify-content: space-between;
+}
