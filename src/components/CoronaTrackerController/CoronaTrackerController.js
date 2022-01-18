@@ -7,7 +7,7 @@ import Sidebar from '../Sidebar/Sidebar';
 function CoronaTrackerController(){
     const [country,setCountry] = useState('');
     const [countriesData,setCountriesData] = useState([]);
-    const [mapzoom,setMapZoom] = useState(4);
+    const [mapzoom,setMapZoom] = useState(3);
     const [mapCenter,setMapCenter] = useState( { lat: 34.80746, lng: -40.4796 })
 
     const [statistics,setStatistics] = useState({})
@@ -28,14 +28,17 @@ function CoronaTrackerController(){
                 countryData.countryInfo.lat,
                 countryData.countryInfo.long
             ]);
-            setMapZoom(3)
-            // console.log(countryData)
+            setMapZoom(1)
+            console.log(mapCenter)
         })
         .catch((err)=>{
             console.log(err)
         })
 
     },[country,setStatistics])
+
+
+ 
    
     const countryChangeHandeller = (data)=> {
         setCountry(data)
