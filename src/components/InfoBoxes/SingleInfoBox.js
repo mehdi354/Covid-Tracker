@@ -1,6 +1,5 @@
 import { Card, CardContent, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react'
-import Numeral from 'react-numeral';
 import {prettyprint} from '../../util/util'
 function SingleInfoBox({cases,total,today}){
 

@@ -1,9 +1,10 @@
+import numeral from 'numeral';
 import React, { useEffect, useState } from 'react'
 import { Line,  LineElement,
     Title,
     Tooltip,
     Legend, } from 'react-chartjs-2';
-import Numeral from 'react-numeral';
+
 
 function Linegraph({caseType}){
 
@@ -55,70 +56,7 @@ function Linegraph({caseType}){
         casesData()
      },[caseType]);
 
-     console.log(allDatas)
-
-    // const options = {
-    //     legend: {
-    //         display: false,
-    //       },
-    //     responsive: true,
-    //     plugins: {
-    //       title: {
-    //         display: true,
-    //         text: 'Chart.js Line Chart',
-    //       },
-    //     },
-    //   };
-
-
-    // const options = {
-    //     legend: {
-    //       display: false,
-    //     },
-    //     elements: {
-    //       point: {
-    //         radius: 0,
-    //       },
-    //     },
-    //     maintainAspectRatio: false,
-    //     tooltips: {
-    //       mode: "index",
-    //       intersect: false,
-    //       callbacks: {
-    //         label: function (tooltipItem, data) {
-    //           return <Numeral
-    //           value={tooltipItem.value}
-    //           format={"+0,0"}
-    //       /> 
-    //         },
-    //       },
-    //     },
-    //     scales: {
-    //     xAxes: [
-    //       {
-    //         type: "time",
-    //         time: {
-    //         format: "MM/DD/YY",
-    //         tooltipFormat: "ll",
-    //         },
-    //     }],
-    //     yAxes: [
-    //         {
-    //           gridLines: {
-    //             display: false,
-    //           },
-    //           ticks: {
-    //             // Include a dollar sign in the ticks
-    //             callback: function (value, index, values) {
-    //                 return <Numeral
-    //                     value={value}
-    //                     format={"0a"}
-    //                 />
-    //             },
-    //           },
-    //         }],
-    //     },
-    // };
+ 
 
     const options = {
         legend: {
@@ -135,10 +73,8 @@ function Linegraph({caseType}){
           intersect: false,
           callbacks: {
             label: function (tooltipItem, data) {
-              return <Numeral
-              value={tooltipItem.value}
-              format={"+0,0"}
-          /> 
+              return numeral(tooltipItem.value).format("+0,0")
+          
             },
           },
         },
@@ -160,10 +96,8 @@ function Linegraph({caseType}){
               ticks: {
                 // Include a dollar sign in the ticks
                 callback: function (value, index, values) {
-                  return <Numeral
-                  value={value}
-                  format={"0a"}
-              />
+                  return numeral(value).format("0.0a");
+                     
                 },
               },
             },
