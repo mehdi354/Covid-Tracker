@@ -37,7 +37,7 @@ function Linegraph({caseType}){
     };
 
     useEffect(()=>{ 
-        console.log(caseType)
+ 
         const casesData = async () => {
             await fetch('https://cors-anywhere.herokuapp.com/https://disease.sh/v3/covid-19/historical/all?lastdays=120')
             .then((response)=> {

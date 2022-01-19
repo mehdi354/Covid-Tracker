@@ -1,10 +1,13 @@
 import { Card, CardContent, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react'
 import {prettyprint} from '../../util/util'
-function SingleInfoBox({cases,total,today}){
+function SingleInfoBox({cases,total,today,setCaseType}){
+    const setCaseTypeHandeller = ()=> {
+        setCaseType(cases)
+    }
 
     return( 
-        <Card>
+        <Card onClick={setCaseTypeHandeller}>
             <CardContent>
                 <Typography>
                     {cases}

@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import SingleInfoBox from './SingleInfoBox';
 import './Infoboxes.css'
-function InfoBoxes({countryName,statistics}){
-
-
+function InfoBoxes({countryName,statistics,setCaseType}){
+    const setCaseTypeHandeller = (data) => setCaseType(data)
 
     return( 
         <div className="app__infoboxes">
-            <SingleInfoBox cases={"Total Cases"} total={statistics.cases} today={ statistics.todayCases} />
-            <SingleInfoBox cases={"Total Deaths"} total={statistics.deaths} today={ statistics.todayDeaths} />
-            <SingleInfoBox cases={"Total Recovered"} total={statistics.recovered} today={ statistics.todayRecovered}/>
+            <SingleInfoBox cases={"Cases"} total={statistics.cases} today={ statistics.todayCases} setCaseType={setCaseTypeHandeller}/>
+            <SingleInfoBox cases={"Deaths"} total={statistics.deaths} today={ statistics.todayDeaths} setCaseType={setCaseTypeHandeller}/>
+            <SingleInfoBox cases={"Recovered"} total={statistics.recovered} today={ statistics.todayRecovered} setCaseType={setCaseTypeHandeller}/>
         </div>
     )
 }

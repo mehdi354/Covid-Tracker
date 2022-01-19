@@ -1,8 +1,7 @@
-import React, { useState,useEffect } from 'react'
+import React from 'react'
 import './Table.css'
 
 function Table({countriesData}){
-
 
     return(
         <div className='Table'>

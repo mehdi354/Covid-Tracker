@@ -3,7 +3,7 @@ import React from 'react'
 import Linegraph from '../Linegraph/Linegraph';
 import Table from '../Table/Table';
 
-function Sidebar({countriesData,caseType}){
+function Sidebar({countriesData,caseType,allcountryData}){
     return(
         <div className='Sidebar'>
             {/* <Card>
@@ -13,7 +13,7 @@ function Sidebar({countriesData,caseType}){
                     <Typography>
                         Countrywise Data
                     </Typography>
-                    <Table countriesData={countriesData} />
+                    <Table countriesData={allcountryData} />
                     <Typography>
                         Live Graph
                         
