@@ -2,3 +2,37 @@
     display: flex;
     justify-content: space-between;
 }
+.Card {
+    border-top: 10px solid #fff;
+    cursor: pointer;
+    flex: 1 1;
+}
+.Card:not(:last-child) {
+    margin-right: 10px;
+}
+.cases__active {
+    border-top: 10px solid #cc1034;
+}
+.deaths__active {
+    border-top: 10px solid #ff6c47;;
+}
+.recovered__active {
+    border-top: 10px solid #7dd71d;;
+}
+.Card h4 {
+    font-weight: 600;
+    margin: 0px;
+    font-size: 14px;
+}
+.Card h2 {
+    margin: 10px 0px;
+}
+.Card.cases__active h2 {
+    color: #cc1034;
+}
+.Card.deaths__active h2 {
+    color: #ff6c47;
+}
+.Card.recovered__active h2 {
+    color: #7dd71d;
+}

@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background: #f4f4f4;
+  font-family: 'Poppins', sans-serif !important;
 }
 .app__container {
   display: flex;
@@ -16,4 +17,7 @@
 .app__right {
   width: 30%;
   padding: 0px 15px;
+}
+.css-ahj2mt-MuiTypography-root {
+  font-family: 'Poppins', sans-serif !important;
 }

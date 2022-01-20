@@ -40,7 +40,7 @@ const casesTypeColors = {
 // };
 
 export const prettyprint = (value ) => (
-    numeral(value !== 0 ? value : '0.0').format("0,0")
+    numeral(value !== 0 ? value : '0.0').format("0a")
 );
 
 export const showMapData = (data,caseType ) => (

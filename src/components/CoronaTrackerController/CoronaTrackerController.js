@@ -90,7 +90,7 @@ function CoronaTrackerController(){
             
             <div className="app__container">
                 <div className="app__Left">
-                    <InfoBoxes countryName={country} statistics={statistics} setCaseType={setCaseTypeHandeller}/>
+                    <InfoBoxes countryName={country} statistics={statistics} setCaseType={setCaseTypeHandeller} casesType={casesType}/>
                     <Map 
                         center={mapCenter} 
                         zoom={mapzoom}
