@@ -12,7 +12,7 @@ const casesTypeColors = {
       option: { color:"#7dd71d", fillColor: "#7dd71d" },
     },
     deaths: {
-      multiplier: 200,
+      multiplier: 250,
       option: { color:"#ff6c47", fillColor: "#ff6c47" }
     },
   };
@@ -48,8 +48,9 @@ export const showMapData = (data,caseType ) => (
     // console.log(caseType)
     data.map( (country,index) => {
 
-        console.log(casesTypeColors[caseType].hex)
+       
         return <Circle
+            key={index}
             center={[country.countryInfo.lat, country.countryInfo.long]}
             pathOptions={casesTypeColors[caseType].option}
             // fillColor={casesTypeColors[caseType].hex}
@@ -60,7 +61,24 @@ export const showMapData = (data,caseType ) => (
             }
             >
             <Popup>
-                <h4>I am popup</h4>
+                <div className="countryInfo">
+                  <div
+                    style={{backgroundImage: `url(${country.countryInfo.flag})`}}
+                    className="countryInfo__flag"
+                  ></div>
+                  <div  className="countryInfo__title">
+                    <h5>{country.country}</h5>
+                  </div>
+                  <div className="countryInfo__total_cases">
+                    Cases: {numeral(country.cases !== 0 ? country.cases : '0.0').format("0a")}
+                  </div>
+                  <div className="countryInfo__total_recovered">
+                    Recovered: {numeral(country.recovered !== 0 ? country.recovered : '0.0').format("0a")}
+                  </div>
+                  <div className="countryInfo__total_deaths">
+                    Deaths: {numeral(country.deaths !== 0 ? country.deaths : '0.0').format("0a")}
+                  </div>
+                </div>
             </Popup>
         </Circle>
 

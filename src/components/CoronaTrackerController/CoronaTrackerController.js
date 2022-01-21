@@ -77,6 +77,7 @@ function CoronaTrackerController(){
         setCasesType(types)
     }
 
+    console.log(country)
 
     
     return(
@@ -99,7 +100,7 @@ function CoronaTrackerController(){
                     />
                 </div>
                 <div className="app__right">
-                    <Sidebar countriesData={countriesForHeader} allcountryData={allcountryData} caseType="cases"></Sidebar>
+                    <Sidebar countriesData={countriesForHeader} allcountryData={allcountryData} caseType={casesType} />
                 </div>
             </div>
         </div>

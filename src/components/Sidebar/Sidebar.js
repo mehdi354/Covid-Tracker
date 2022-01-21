@@ -4,6 +4,7 @@ import Linegraph from '../Linegraph/Linegraph';
 import Table from '../Table/Table';
 
 function Sidebar({countriesData,caseType,allcountryData}){
+    console.log(caseType)
     return(
         <div className='Sidebar'>
             {/* <Card>
