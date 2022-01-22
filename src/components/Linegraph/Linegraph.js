@@ -14,22 +14,18 @@ function Linegraph({caseType}){
       
         const chartdata = [];
         let lastDateData;
-        let loop = 1;
-        // console.log(data[casesType])
         for(let date in data[casesType]) {
             let singleData;
-            // console.log(`=================== Loop ${loop} ============================`)
+
             if(lastDateData) {
                 singleData = {
                     x: date,
                     y: data[casesType][date] - lastDateData
                 }
-                chartdata.push(singleData)
+                chartdata.push(singleData);
             }
             
-            lastDateData = data[casesType][date]
-            // console.log(date)
-            loop++;
+            lastDateData = data[casesType][date];
           
         }
 
@@ -40,7 +36,7 @@ function Linegraph({caseType}){
     useEffect(()=>{ 
        
         const casesData = async () => {
-            await fetch('https://cors-anywhere.herokuapp.com/https://disease.sh/v3/covid-19/historical/all?lastdays=120')
+            await fetch('https://disease.sh/v3/covid-19/historical/all?lastdays=120')
             .then((response)=> {
                 return response.json()
             })

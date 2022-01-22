@@ -16,8 +16,8 @@ function CoronaTrackerController(){
 
     useEffect(()=>{
         console.log(country)
-        const url = country === 'worldwide' ?  `https://cors-anywhere.herokuapp.com/https://disease.sh/v3/covid-19/all`
-        : `https://cors-anywhere.herokuapp.com/https://disease.sh/v3/covid-19/countries/${country}`;
+        const url = country === 'worldwide' ?  `https://disease.sh/v3/covid-19/all`
+        : `https://disease.sh/v3/covid-19/countries/${country}`;
 
         fetch(url)
         .then((response)=> response.json())
@@ -38,7 +38,7 @@ function CoronaTrackerController(){
 
     // FETCH INITIALLY ALL COUNTRY DATA
     useEffect(()=>{
-        fetch('https://cors-anywhere.herokuapp.com/https://disease.sh/v3/covid-19/countries')
+        fetch('https://disease.sh/v3/covid-19/countries')
         .then((response)=> response.json())
         .then((data)=>{
             let allCountries = data.map( (country,index) => {

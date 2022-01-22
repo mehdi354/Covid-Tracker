@@ -4,19 +4,7 @@ import AcUnitIcon from '@mui/icons-material/AcUnit';
 
 function Header({countryChange,allCountry,countriesData}){
 
-    // const [countries,setCountries] = useState([]);
-    // const [singleCountry,setSingleCountry] = useState('worldwide');
-    // const [allCountryData,setAllCountryData] = useState([]);
-    
-    // useEffect(()=>{
-    //    countryChange(singleCountry)
-    //    allCountry(allCountryData)
-    // },[countryChange,singleCountry,allCountry,allCountryData])
-    
-    
-
     const onCountryChange = (event, options) => {
-        // setSingleCountry(options.value)
         countryChange(options.value)
     }
 
