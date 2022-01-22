@@ -49,6 +49,15 @@
   display: flex;
   justify-content: space-between;
 }
+.MuiToolbar-root {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 10px 0px; */
+}
+.MuiAutocomplete-root {
+  color: #FFFFFF;
+  margin: 10px 0px;
+}
 .Linegraph {
   /* flex-grow: 1; */
   /* flex: 1; */

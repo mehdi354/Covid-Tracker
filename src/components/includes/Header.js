@@ -31,6 +31,7 @@ function Header({countryChange,allCountry,countriesData}){
                         </Typography>
                     </div>
                     <Autocomplete 
+                    className="inputRoot"
                      align= 'right'
                      disablePortal
                      options={countriesData}
