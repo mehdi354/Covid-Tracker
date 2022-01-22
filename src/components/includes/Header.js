@@ -36,8 +36,9 @@ function Header({countryChange,allCountry,countriesData}){
                      disablePortal
                      options={countriesData}
                      style={{ width: 300 }}
-                     renderInput={(params ,index) => <TextField key={index} {...params} label="Country"/>}
+                     renderInput={(params ,index) => <TextField key={index} {...params} label="Country" variant="outlined"/>}
                      onChange={onCountryChange}
+                     
                      />
 
                 </Toolbar>
