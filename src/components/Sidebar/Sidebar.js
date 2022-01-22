@@ -9,17 +9,18 @@ function Sidebar({countriesData,caseType,allcountryData}){
         <div className='Sidebar'>
             {/* <Card>
             <CardContent></CardContent> */}
-            <Card>
+            <Card className="Sidebar__card">
                 <CardContent>
                     <Typography>
                         Countrywise Data
                     </Typography>
                     <Table countriesData={allcountryData} />
-                    <Typography>
-                        Live Graph
-                        
-                    </Typography>
-                    <Linegraph caseType={caseType}></Linegraph>
+                    <div className="Linegraph__content">
+                        <Typography>
+                            Live Graph
+                        </Typography>
+                        <Linegraph caseType={caseType}></Linegraph>
+                    </div>
                 </CardContent>
             </Card>
         </div>
