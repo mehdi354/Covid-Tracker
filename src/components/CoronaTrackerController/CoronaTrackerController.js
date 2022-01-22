@@ -15,7 +15,6 @@ function CoronaTrackerController(){
     const [casesType,setCasesType] = useState('cases')
 
     useEffect(()=>{
-        console.log(country)
         const url = country === 'worldwide' ?  `https://disease.sh/v3/covid-19/all`
         : `https://disease.sh/v3/covid-19/countries/${country}`;
 
@@ -28,7 +27,7 @@ function CoronaTrackerController(){
                 countryData.countryInfo.long
             ]);
             setMapZoom(5)
-            // console.log(mapCenter)
+            console.log(countryData)
         })
         .catch((err)=>{
             console.log(err)
@@ -77,7 +76,7 @@ function CoronaTrackerController(){
         setCasesType(types)
     }
 
-    console.log(country)
+
 
     
     return(

@@ -11,20 +11,22 @@ function Header({countryChange,allCountry,countriesData}){
     return(
         <div className='header'>
             <AppBar position="static" >
-                <Toolbar
-                >
-
-                    <AcUnitIcon />
-                    <Typography>
-                        Corona Tracker
-                    </Typography>
+                <Toolbar>
+                    <div className="title">
+                        <AcUnitIcon />
+                        <Typography>
+                            Corona Tracker
+                        </Typography>
+                    </div>
                     <Autocomplete 
+                    className="inputRoot"
                      align= 'right'
                      disablePortal
                      options={countriesData}
-                     sx={{ width: 300 }}
-                     renderInput={(params ,index) => <TextField key={index} {...params} label="Country"/>}
+                     style={{ width: 300 }}
+                     renderInput={(params ,index) => <TextField key={index} {...params} label="Country" variant="outlined"/>}
                      onChange={onCountryChange}
+                     
                      />
 
                 </Toolbar>
